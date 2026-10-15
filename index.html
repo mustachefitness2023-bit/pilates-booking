@@ -104,8 +104,8 @@
   </main>
 
   <script>
-    // ⚠️ 請替換為您發布的 Google Apps Script Web App URL
-    const https://script.google.com/macros/s/AKfycbyKPhalQnpWzAGlyanKfZqoOu6N1AYiGzj7UnljkCNR3SAhv7VplrZu6mqd6_cuH5vJzg/exec = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+    // 正確設定變數名稱
+    const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyKPhalQnpWzAGlyanKfZqoOu6N1AYiGzj7UnljkCNR3SAhv7VplrZu6mqd6_cuH5vJzg/exec";
 
     function selectType(type) {
       document.getElementById('bookingType').value = type;
@@ -145,7 +145,7 @@
       submitBtn.innerText = "預約傳送中...";
 
       try {
-        await fetch(https://script.google.com/macros/s/AKfycbyKPhalQnpWzAGlyanKfZqoOu6N1AYiGzj7UnljkCNR3SAhv7VplrZu6mqd6_cuH5vJzg/exec, {
+        await fetch(GAS_WEB_APP_URL, {
           method: 'POST',
           mode: 'no-cors',
           headers: { 'Content-Type': 'application/json' },
